@@ -1,3 +1,6 @@
+#Planificación en Trello
+https://trello.com/b/ervBF9Fq/social-network-react
+
 # Rehaciendo tu red social usando librerías y frameworks
 
 ## Preámbulo
