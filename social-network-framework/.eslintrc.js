@@ -11,6 +11,10 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "extends": 
+    [
+        "standard", "standard-react"
+    ],
     "plugins": [
         "react"
     ],
@@ -30,6 +34,9 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "no-unused-vars": [
+            "off"
         ]
     }
 };
