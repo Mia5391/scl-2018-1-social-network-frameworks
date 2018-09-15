@@ -1,10 +1,13 @@
 import React from 'react';
+import logoSocialNetwork from './logoSocialNetwork.png'; 
+import './Login.css'; 
 
-const path = href('./logoSocialNetwork.png');  
-
-// const Logo = ({ path, altLogo }) => (
-//     <img src={path} alt={altLogo} className="appLogo"/>
-//   );
-  
+const Logo = () => {
+    return (
+      <div>
+        <img className="logoApp" alt="logoApp" src={logoSocialNetwork} />
+      </div>
+    )
+  }
 
 export default Logo; 
