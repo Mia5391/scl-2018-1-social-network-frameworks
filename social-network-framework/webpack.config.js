@@ -10,9 +10,9 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
+        test:/\.css$/,
+        use:['style-loader','css-loader']
+    },
       {
         test: /\.png$/,
         loader: 'file-loader'
@@ -20,7 +20,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.png']
   },
   output: {
     path: __dirname + './public',
