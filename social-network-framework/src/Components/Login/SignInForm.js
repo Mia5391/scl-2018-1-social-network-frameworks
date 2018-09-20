@@ -1,49 +1,49 @@
-// Basic imports
-import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// Styling imports
-// import { Container, Row, Col } from 'react-grid-system';
-// import { Input, Button } from 'react-materialize';
+import React from 'react';
+import './Login.css';
+import {Row, Input, Icon, Button, Col} from 'react-materialize'
+import firebaseIntegration from '../../firebase' ;
 
-class LoginForm extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+class SignInForm extends React.Component {
+constructor(props) {
+    super(props);
+    this.login = this.login.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
 
-  // onSubmit = event => {
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
-  // }
-
+  login(e) {
+    e.preventDefault();
+    firebaseIntegration.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+    }).catch((error) => {
+        console.log(error);
+      });
+  }
+ 
   render() {
-    return (
-      // <div>
-      //   <Container>
-      //     <Row>
-      //       <Col sm={3} />
-      //       <Col sm={6}>
-      //         <form onSubmit={this.onSubmit}>
-      //           <Input type="email" label="Email" s={12} />
-      //           <Input type="password" label="password" s={12} />
-      //           <Button type="submit" waves='light'>Ingresar</Button>
-      //         </form>
-      //       </Col>
-      //       <Col sm={3} />
-      //     </Row>
-      //   </Container>
-      // </div>
-      <h1>Holi</h1>
-    )
-  }   
+    return ( 
+    <Row className="example">
+    <Col s={12}>
+      <Input s={12} value={this.state.email} onChange={this.handleChange} type="email" name="email"  placeholder="Email">
+        <Icon>account_circle</Icon>
+      </Input>
+      <Input s={12} type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}>
+        <Icon>lock</Icon>
+      </Input>
+      <div className="center">
+      <Button s={6} className='ButtonLarge1' waves='light' node='a' href='' type="submit" onClick={this.login}> Login </Button>
+      </div>
+    </Col>
+    
+    </Row>
+    );
+  }
 }
 
-// const SignUpLink = () => {
-//   <p>No tienes una cuenta? Regístrate acá:
-//     <Link to={`../Register/Register.js`}>Registrarse</Link>
-//   </p>
-// }
-
-export default LoginForm;
-
-// export {
-//   SignUpLink
-// };
+export default SignInForm;
