@@ -14,7 +14,7 @@ class Like extends Component {
       counter: this.state.counter + 1
     })
   }
-  
+
   render() {
     return (
       <div>
@@ -26,4 +26,4 @@ class Like extends Component {
  
 }
 
-export default Like;
+export default Like; 
