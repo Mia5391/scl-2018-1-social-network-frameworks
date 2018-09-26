@@ -21,9 +21,9 @@ const Login = () => {
 
         </Row>
         <SignInForm />
-        <Register />
+        {/* <Register /> */}
         <Link to="/register">¿No tienes una cuenta? ¡Regístrate!</Link>
-        <Route path="/register" component={Register}></Route>
+        {/* <Route path="/register" component={Register}></Route> */}
       </div>
     </Router>
   )
