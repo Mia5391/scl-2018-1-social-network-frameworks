@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <Router>
       <div className="loginContainer">
-        <Row className="bleh" > //FIX 
+        <Row className="bleh" > //FIX
           <Col s={12}>
             <div className="containerTitle">
               <Logo />
