@@ -1,6 +1,6 @@
 {
-  "name": "social-network-framework",
-  "version": "0.1.0",
+  "name": "sechat",
+  "version": "2.0.0",
   "private": true,
   "homepage": "https://sofiamaturanam.github.io/SeChat",
   "dependencies": {
@@ -47,5 +47,16 @@
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"
+  },
+  "description": "https://trello.com/b/ervBF9Fq/social-network-react",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofiaMaturanaM/SeChat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofiaMaturanaM/SeChat/issues"
   }
 }
