@@ -21,7 +21,7 @@ const {
          googleAccessToken,
          facebookAccessToken,
          user,
-         error 
+         error
     } = this.props;
     return (
      <div className= "app">
@@ -33,9 +33,28 @@ const {
           </div>
         </Router>
         {/* </div> */}
+        <button onClick={signInWithGoogle}>Signin with Google</button>
+        <button onClick={signInWithFacebook}>Signin with Facebook</button>
         </div>
     );
   }
 }
+const authConfig = {
+  email: {
+    verifyOnSignup: false, // Sends verification email to user upon sign up
+    saveUserInDatabase: true // Saves user in database at /users ref
+  },
+  google: {
+    // redirect: true, // Opens a pop up by default
+    returnAccessToken: true, // Returns an access token as googleAccessToken prop
+    saveUserInDatabase: true // Saves user in database at /users ref
+  },
+  facebook: {
+    // redirect: true, // Opens a pop up by default
+    returnAccessToken: true, // Returns an access token as googleAccessToken prop
+    saveUserInDatabase: true // Saves user in database at /users ref
+  }
+};
 
+export default withFirebaseAuth(App, firebase, authConfig);
 export default App;
