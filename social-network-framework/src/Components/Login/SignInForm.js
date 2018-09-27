@@ -29,7 +29,8 @@ constructor(props) {
   render() {
     return ( 
     <Row className="signInForm">
-    <Col s={12}>
+    <Col className="signIn" s={8}>
+    <h1>Sign In</h1>
       <Input s={12} value={this.state.email} onChange={this.handleChange} type="email" name="email"  placeholder="Email">
         <Icon></Icon>
       </Input>

@@ -1,6 +1,7 @@
 // import React, { Component } from 'react';
 // import firebaseIntegration from '../../firebase'
 // import { withRouter } from 'react-router-dom';
+// import {Row, Input, Icon, Button, Col} from 'react-materialize'
 // import './Register.css';
 
 // class Register extends Component {
