@@ -15,7 +15,7 @@ class App extends Component {
       <Router basename={process.env.PUBLIC_URL + '/'}>
         <div className="App">
           <Route exact path={routes.Login} component={Login} />
-          <Route exact path={routes.Register} component={Register} />
+          {/* <Route exact path={routes.Register} component={Register} />  */}
           <Route exact path={routes.Timeline} component={Timeline} />
         </div>
       </Router>
