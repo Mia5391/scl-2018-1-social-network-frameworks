@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Login.css';
 // import Register from '../Register/Register';
 
-
 const Login = () => {
   return (
     <Router>
@@ -26,6 +25,18 @@ const Login = () => {
       </div>
     </Router>
   )
+}
+
+handleSubmit(e) = async event => {
+  event.preventDefault();
+
+  try {
+    await Auth.signIn(this.state.email, this.state.password);
+    this.props.userHasAuthenticated(true);
+    this.props.history.push("/");
+  } catch (e) {
+    alert(e.message);
+  }
 }
 
 export default Login;
