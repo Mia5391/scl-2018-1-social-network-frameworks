@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <Router>
       <div className="loginContainer">
-        <Row className="bleh" >
+        <Row className="bleh" > //FIX 
           <Col s={12}>
             <div className="containerTitle">
               <Logo />
@@ -28,4 +28,4 @@ const Login = () => {
   )
 }
 
-export default Login; 
+export default Login;
