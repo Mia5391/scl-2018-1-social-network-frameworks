@@ -1,9 +1,13 @@
 .loginContainer{
     background-image: url("backgroundLogin.jpg"); 
-    background-size: cover;
-    /* padding: 10em 0em; */
-    width: auto;
+    background-size: cover; 
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
     height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .logoSocialNetwork{
