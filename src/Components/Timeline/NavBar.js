@@ -19,8 +19,8 @@ class NavBar extends Component {
     render() {
         return (
             <Navbar /*brand={<Logo/>}*/ className="navbar" right>   
-                <NavItem href={process.env.PUBLIC_URL + '/Timeline'} ><span className="textIcon">Timeline</span><Icon>home</Icon></NavItem>
-                <NavItem onClick={this.logout} ><span className="textIcon">Log out</span><Icon></Icon></NavItem>       
+                <NavItem href={process.env.PUBLIC_URL + '/timeline'} ><span className="textIcon">Timeline</span><Icon>Home</Icon></NavItem>
+                <NavItem onClick={this.logout} ><span className="textIcon">Log out</span><Icon>Log Out</Icon></NavItem>       
             </Navbar>
         )
     }

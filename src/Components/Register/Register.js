@@ -33,7 +33,7 @@ class Register extends Component {
     e.preventDefault();
     firebaseIntegration.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
       this.setState({ ...initialState });
-      {history.push(routes.TIMELINE)}
+      // {history.push(routes.TIMELINE)}
     }).then((u) => {  
      
     })
