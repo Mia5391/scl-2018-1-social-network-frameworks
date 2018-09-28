@@ -4,8 +4,6 @@ import NavBar from './NavBar';
 import Comments from './Comments';
 
 
-
-
 class Timeline extends Component {
   // constructor() {
   //   super();

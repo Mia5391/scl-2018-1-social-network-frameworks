@@ -3,6 +3,22 @@ import './Login.css';
 import {Input, Icon, Button} from 'react-materialize';
 import { Grid, Row, Col } from 'react-material-responsive-grid';
 import firebaseIntegration from '../../firebase' ;
+import { withRouter } from 'react-router-dom';
+
+const AuthButton = withRouter(
+  ({ history }) =>
+    firebaseIntegration.auth().isAuthenticated ? (
+        <button
+          onClick={() => {
+            firebaseIntegration.auth().signInWithEmailAndPassword(this.state.email, this.state.password)(() => history.push("/timeline"));
+          }}
+        >
+        </button>
+     
+    ) : (
+       <p>You are not logged in.</p>
+    )
+);
 
 class SignInForm extends React.Component {
 constructor(props) {
@@ -11,7 +27,8 @@ constructor(props) {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      // user: null 
     };
   }
 
@@ -22,11 +39,13 @@ constructor(props) {
   login(e) {
     e.preventDefault();
     firebaseIntegration.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+     
     }).catch((error) => {
         console.log(error);
       });
       // console.log("Ingresado");
   }
+
  
   render() {
     return ( 
@@ -41,9 +60,10 @@ constructor(props) {
         <Icon></Icon>
       </Input>
       <div className="center">
-      <Button s={6} className='ButtonLarge1' waves='light' node='a' href='' type="submit" onClick={this.login}> Login </Button>
+      <Button s={6} className='ButtonLarge1' waves='light' node='a' href='' type="submit" onClick={AuthButton}> Login </Button>
+      
       </div>
-     
+    
     </Col>
     
     </Row>
@@ -52,4 +72,4 @@ constructor(props) {
   }
 }
 
-export default SignInForm;
+export default withRouter(SignInForm);

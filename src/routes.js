@@ -1,3 +1,3 @@
-export const Login = '/';
-export const Register = '/register';
-export const Timeline = '/timeline'; 
+export const LOGIN = '/';
+export const REGISTER = '/register';
+export const TIMELINE = '/timeline';
