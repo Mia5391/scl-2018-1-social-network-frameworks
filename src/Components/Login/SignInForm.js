@@ -1,7 +1,25 @@
 import React from 'react';
 import './Login.css';
-import {Row, Input, Icon, Button, Col} from 'react-materialize'
+import {Input, Icon, Button} from 'react-materialize';
+import { Grid, Row, Col } from 'react-material-responsive-grid';
 import firebaseIntegration from '../../firebase' ;
+import { withRouter } from 'react-router-dom';
+import * as routes from '../../routes'; 
+
+// const AuthButton = withRouter(
+//   ({ history }) =>
+//     firebaseIntegration.auth().isAuthenticated ? (
+//         <button
+//           onClick={() => {
+//             firebaseIntegration.auth().signInWithEmailAndPassword(this.state.email, this.state.password)(() => history.push("/timeline"));
+//           }}
+//         >
+//         </button>
+     
+//     ) : (
+//        <p>You are not logged in.</p>
+//     )
+// );
 
 class SignInForm extends React.Component {
 constructor(props) {
@@ -10,7 +28,8 @@ constructor(props) {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      // user: null 
     };
   }
 
@@ -21,15 +40,18 @@ constructor(props) {
   login(e) {
     e.preventDefault();
     firebaseIntegration.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+     
     }).catch((error) => {
         console.log(error);
       });
       // console.log("Ingresado");
   }
+
  
   render() {
     return ( 
-    <Row className="signInForm">
+    <Grid>
+      <Row className="signInForm">
     <Col className="signIn" s={8}>
     <h1>Sign In</h1>
       <Input s={12} value={this.state.email} onChange={this.handleChange} type="email" name="email"  placeholder="Email">
@@ -39,13 +61,16 @@ constructor(props) {
         <Icon></Icon>
       </Input>
       <div className="center">
-      <Button s={6} className='ButtonLarge1' waves='light' node='a' href='' type="submit" onClick={this.login}> Login </Button>
+      <Button s={6} className='ButtonLarge1' waves='light' node='a' href=''  type="submit" onClick={this.login}> Login </Button>
+      
       </div>
+    
     </Col>
     
     </Row>
+    </Grid>
     );
   }
 }
 
-export default SignInForm;
+export default withRouter(SignInForm);

@@ -18,7 +18,7 @@ class Like extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.likeCounter.bind(this)}>Likes<Icon left>star</Icon> {this.state.counter} </Button>
+        <Button onClick={this.likeCounter.bind(this)}>Likes<Icon left star></Icon> {this.state.counter} </Button>
       </div>
     )
   }

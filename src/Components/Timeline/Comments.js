@@ -24,7 +24,7 @@ class Comments extends Component {
             <Post items={this.state.items} />
             <form onSubmit={this.handleSubmit}>
               <textarea className = "comment" onChange = {this.handleChange} value = {this.state.text} ></textarea>
-              <Button floating large className='red' waves='light' icon='add'>{this.state.items.length + 1}</Button>
+              <Button floating large className='violet' waves='light' icon='add'>{this.state.items.length + 1}</Button>
             </form>
           </Col>
         </Row>

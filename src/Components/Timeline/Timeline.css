@@ -1,0 +1,79 @@
+.logo{
+    height: 2em;
+}
+.navbar{
+    background-color: blueviolet;
+}
+
+.comment{
+    align-self: center; 
+
+}
+
+.icon{
+    font-size: 55px;
+    color: rgba(0, 0, 0, 0.651);
+    background-color: blueviolet;
+}
+.box{
+    height: 10%;
+}
+.inputxt{
+    width: 90%;
+}
+.imgu{
+
+    margin-top: 1em;
+
+}
+.textIcon{
+    text-align: center
+}
+@media (min-width: 1000px) {
+    .textIcon{
+        display: none;
+text-align: center;    }
+}
+
+.divPost{
+    
+    padding: 1em;
+    background-color: rgb(231, 226, 226,1);
+    height: auto;
+    /* word-break: break-all;
+    word-wrap: break-word; */
+    word-break: normal !important;
+    text-align: justify;
+}
+.divinpt{
+    width: 100%;
+
+}
+#post_list{
+    padding-top: 2%;
+    display: inline-block;
+}
+.inpt2::placeholder{
+color:blueviolet;
+
+}
+.formaticondiv{
+    width: 3em;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-shadow: none;
+    background-color: transparent;
+}
+.formaticondiv:hover{
+    background-color: transparent;
+    box-shadow: none;   
+}
+.iconolike{
+color: gold;
+}
+.iconolike:hover{
+color: goldenrod;
+}
+.icondelet{
+    color: gray;
+}

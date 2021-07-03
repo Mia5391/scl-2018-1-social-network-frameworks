@@ -16,8 +16,20 @@
 }
 
 .signIn{
-    background-color: white; 
+   background-color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
+.loginContainer{
+   
+    display: block;
+    text-align: center
+}
 
+.ButtonLarge1{
+    background-color: blueviolet; 
+}
 
